@@ -4,13 +4,18 @@
 *.class
 .idea/
 *.iml
+.mvn/
+mvnw*
 # Log file
 *.log
 
 # BlueJ files
 *.ctxt
 
-# Mobile Tools for Java (J2ME)
+# Mobil
+
+:q
+:q
 .mtj.tmp/
 
 # Package Files #
