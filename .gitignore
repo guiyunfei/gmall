@@ -6,6 +6,8 @@
 *.iml
 .mvn/
 mvnw*
+
+#测试
 # Log file
 *.log
 
