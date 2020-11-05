@@ -1,9 +1,10 @@
 package com.atguigu.gmall.pms.service.impl;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
-import java.util.Map;
+
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
@@ -17,6 +18,10 @@ import com.atguigu.gmall.pms.service.CategoryService;
 
 @Service("categoryService")
 public class CategoryServiceImpl extends ServiceImpl<CategoryMapper, CategoryEntity> implements CategoryService {
+
+
+    @Autowired
+    private CategoryMapper categoryMapper;
 
     @Override
     public PageResultVo queryPage(PageParamVo paramVo) {
@@ -32,11 +37,11 @@ public class CategoryServiceImpl extends ServiceImpl<CategoryMapper, CategoryEnt
     public List<CategoryEntity> queryCategory(Long id) {
   //-1：查询所有，0：查询一级节点
         QueryWrapper<CategoryEntity> wrapper = new QueryWrapper<>();
-        if(id == 0){
-            wrapper.eq("parent_id",0);
+        if(id != -1){
+            wrapper.eq("parent_id",id);
         }
 
-        return baseMapper.selectList(wrapper);
+        return categoryMapper.selectList(wrapper);
 
     }
 

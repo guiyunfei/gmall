@@ -6,7 +6,6 @@ import com.atguigu.gmall.common.bean.PageParamVo;
 import com.atguigu.gmall.pms.entity.AttrGroupEntity;
 
 import java.util.List;
-import java.util.Map;
 
 /**
  * 属性分组
@@ -20,5 +19,7 @@ public interface AttrGroupService extends IService<AttrGroupEntity> {
     PageResultVo queryPage(PageParamVo paramVo);
 
     List<AttrGroupEntity> queryByCid(Long id);
+
+    List<AttrGroupEntity> queryGroupVoByCid(Long cId);
 }
 

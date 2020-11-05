@@ -1,7 +1,7 @@
 spring:
   application:
     name: pms-service
-
+#拉取nacos注册中心的配置
   cloud:
     nacos:
       config:

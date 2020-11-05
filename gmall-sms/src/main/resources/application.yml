@@ -10,6 +10,9 @@ spring:
     sentinel:
       transport:
         dashboard: localhost:8080
+    alibaba:
+      seata:
+        tx-service-group: gmall_tx_group
 
   datasource:
     driver-class-name: com.mysql.jdbc.Driver
@@ -26,7 +29,7 @@ spring:
     discovery-client-enabled: false
     sender:
       type: web
-  #采集率
+
   sleuth:
     sampler:
       probability: 1
@@ -38,7 +41,7 @@ mybatis-plus:
     db-config:
       id-type: auto
 
-#启用feign对sentinel支持
+
 feign:
   sentinel:
     enabled: true

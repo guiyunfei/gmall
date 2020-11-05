@@ -1,11 +1,12 @@
 package com.atguigu.gmall.pms.service;
 
+import com.atguigu.gmall.pms.entity.SkuAttrValueEntity;
 import com.baomidou.mybatisplus.extension.service.IService;
 import com.atguigu.gmall.common.bean.PageResultVo;
 import com.atguigu.gmall.common.bean.PageParamVo;
 import com.atguigu.gmall.pms.entity.SkuEntity;
 
-import java.util.Map;
+import java.util.List;
 
 /**
  * sku信息
@@ -17,5 +18,7 @@ import java.util.Map;
 public interface SkuService extends IService<SkuEntity> {
 
     PageResultVo queryPage(PageParamVo paramVo);
+
+    List<SkuAttrValueEntity> querySearchSkuValueByCidAndSpuId(Long cid, Long skuId);
 }
 

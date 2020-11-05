@@ -1,5 +1,6 @@
 server:
   port: 18081
+
 spring:
   cloud:
     nacos:
@@ -10,6 +11,13 @@ spring:
       transport:
         dashboard: localhost:8080
         port: 8719
+
+#配置seata注册中心
+    alibaba:
+      seata:
+        tx-service-group: gmall_tx_group
+
+
   datasource:
     driver-class-name: com.mysql.jdbc.Driver
     url: jdbc:mysql://localhost:3306/guli_pms?useUnicode=true&characterEncoding=UTF-8&useSSL=false
@@ -32,6 +40,7 @@ spring:
     sampler:
       probability: 1
 
+
 mybatis-plus:
   mapper-locations: classpath:mapper/**/*.xml
   type-aliases-package: com.atguigu.gmall.pms.entity
@@ -43,3 +52,6 @@ mybatis-plus:
 feign:
   sentinel:
     enabled: true
+logging:
+  level:
+    root: info

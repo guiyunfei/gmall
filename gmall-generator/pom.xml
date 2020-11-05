@@ -5,7 +5,7 @@
 	<groupId>com.atguigu</groupId>
 	<artifactId>gmall-generator</artifactId>
 	<version>1.0.0</version>
-	<packaging>jar</packaging>
+
 	<description>谷粒商城代码生成器</description>
 
 	<parent>

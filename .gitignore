@@ -6,7 +6,7 @@
 *.iml
 .mvn/
 mvnw*
-
+gmall-admin-前端后台/
 #测试
 # Log file
 *.log
